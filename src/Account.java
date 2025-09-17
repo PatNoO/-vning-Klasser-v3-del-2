@@ -1,8 +1,9 @@
 public class Account {
 
     /// 2 stycken instansvariabler "balance" och "name"
-    double balance;
-    String name;
+    String name = "Steve";
+    double balance ;
+
 
     ///  Konstruktor för att ta in "balance"
     public Account(double balance) {
@@ -25,5 +26,20 @@ public class Account {
         return balance;
     }
 
-    
+    public Account(double balance, String name) {
+        this.name = name;
+        this.balance = balance;
+
+    }
+
+    public String getName() {
+        return this.name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String toString() {
+        return "Account name: " + this.name + " balance: " + this.balance;
+    }
 }
